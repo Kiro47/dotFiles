@@ -56,3 +56,4 @@ export VAGRANT_HOME=/mnt/VM_DISC_2/VAGRANT/
 export INTELFPGAOCLSDKROOT="/mnt/QUARTUS/opt/MTU/quartus/v16.1.1/hld"
 
 export QSYS_ROOTDIR="/mnt/QUARTUS/opt/MTU/quartus/v16.1.1/qsys/bin"
+
