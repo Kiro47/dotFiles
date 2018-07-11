@@ -3,6 +3,10 @@
 !.bashrc
 !.aliases
 !.bash_it/
+!.bash_it/
 !.bash_it/*
 !.bash_it/**
+
+
+
 !.gitignore
