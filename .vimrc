@@ -53,7 +53,10 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Status Bar
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+
+" Status Bar Themes
+Plug 'vim-airline/vim-airline-themes'
 
 " Tab Completion Searching
 Plug 'vim-scripts/SearchComplete'
@@ -70,6 +73,13 @@ Plug 'rodjek/vim-puppet'
 " Puppet Labs syntax
 Plug 'puppetlabs/puppet-syntax-vim'
 
+" Async Lint Engine
+if v:version > 800
+	Plug 'w0rp/ale'
+endif
+
+" Auto tab formatting
+Plug 'godlygeek/tabular'
 
 call plug#end()
 "Plugin Calling Ends
@@ -175,3 +185,32 @@ let g:cpp_concepts_highlight = 1
 let g:UltiSnipsExpandTrigger="<C-TAB>"
 let g:UltiSnipsJumpForwardTrigger="<A-ENTER>"
 let g:UltiSnipsJumpBackwardTrigger="<A-BACKSPACE>"
+
+" ALE config
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+" Disable hightlighting let g:ale_set_highlights = 0
+let g:ale_list_window_size = 5
+" ALE airline integration
+let g:airline#extensions#ale#enabled = 1
+
+" Airline theme
+let g:airline_theme='hybridline'
+
+"Auto remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+" MTU formatting spec
+autocmd Filetype cfg setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal  ts=2 sts=2 sw=2
+autocmd Filetype puppet setlocal  ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal  ts=2 sts=2 sw=2
+autocmd BufNewFile,BufRead *.epp set filetype=eruby
+autocmd FileType make set noexpandtab sw=8 sts=0
+
+" Enable spellcheck
+set spelllang=en
+
