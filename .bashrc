@@ -52,3 +52,7 @@ source ~/.aliases
 ### VAGRANT OF DEATH
 export VAGRANT_HOME=/mnt/VM_DISC_2/VAGRANT/
 
+
+export INTELFPGAOCLSDKROOT="/mnt/QUARTUS/opt/hld"
+
+export QSYS_ROOTDIR="/mnt/QUARTUS/opt/qsys/bin"
