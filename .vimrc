@@ -9,6 +9,17 @@ if a:info.status == 'installed' || a:info.force
 endif
 endfunction
 
+"Auto install PDF to text
+function! InstallPdfToText(info)
+	if empty(glob('~/.vim/PDF_To_Text/installer.run'))
+		silent !curl -fLo ~/.vim/PDF_To_Text/installer.run --create-dirs
+		\ https://xpdfreader-dl.s3.amazonaws.com/XpdfReader-linux64-4.00.01.run
+		chmod u+x ~/.vim/PDF_To_Text/installer.run
+		"Note, stupid thing always does relative install
+		autocmd VimEnter * ~/.vim/PDF_To_text/./installer.run
+	endif
+endfunction
+
 " Auto Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
 silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -80,6 +91,9 @@ endif
 
 " Auto tab formatting
 Plug 'godlygeek/tabular'
+
+" Vim PDF Reader so Baron stops making me feel bad.
+Plug 'makerj/vim-pdf', {'do': function('InstallPdfToText') }
 
 call plug#end()
 "Plugin Calling Ends
