@@ -6,7 +6,9 @@
 !.bash_it/
 !.bash_it/*
 !.bash_it/**
-
+!.vim/
+!.vim/spell/
+!.vim/spell/*
 
 
 !.gitignore

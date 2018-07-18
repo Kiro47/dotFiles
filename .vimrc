@@ -24,7 +24,7 @@ if v:version > 800
 	Plug 'Valloric/YouCompleteMe', {'do': function('BuildYCM') }
 endif
 
-" Inbuild file manager with git extension
+" Inbuilt file manager with git extension
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -37,13 +37,13 @@ Plug 'tpope/vim-fugitive'
 " Hex -> CSS Color Selector
 Plug 'ap/vim-css-color'
 
-"CSS3 Syntax Highlighting
+"CSS 3 Syntax Highlighting
 Plug 'hail2u/vim-css3-syntax'
 
-"CSSS3 Syntax Highlighting
+"CSS 3 Syntax Highlighting
 Plug 'cakebaker/scss-syntax.vim'
 
-" C++ Extra highligthing
+" C++ Extra highlighting
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Snippet Marker
@@ -92,7 +92,7 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-"set expandtab "Depends on which system, sometimes this is mandatory off
+"set expand tab "Depends on which system, sometimes this is mandatory off
 set number
 set ruler
 set encoding=utf-8
@@ -104,7 +104,7 @@ set cursorline
 set ignorecase
 set smartcase
 set incsearch " dynamic searching
-set hlsearch " hightlight all matches
+set hlsearch " highlight all matches
 
 " NO BEEP DEAR GOD WHO THOUGHT THIS WAS A GOOD IDEA?
 set noerrorbells
@@ -130,7 +130,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " Enable Mouse support
-set mouse=a
+"set mouse=a
 
 "Color Formatting
 colorscheme koehler
@@ -157,14 +157,14 @@ let g:gitgutter_signs = 1
 let g:gitgutter_highlight_lines = 0
 set updatetime=100
 
-" CSS3 Hightlight rig
+" CSS 3 Highlight rig
 augroup VimCSS3Syntax
 autocmd!
 
 autocmd FileType css setlocal iskeyword+=-
 augroup END
 
-" CSSS3 keyword fix
+" CSS 3 keyword fix
 autocmd FileType scss set iskeyword+=-
 au BufRead,BufNewFile *.scss set filetype=scss.css
 
@@ -190,7 +190,7 @@ let g:UltiSnipsJumpBackwardTrigger="<A-BACKSPACE>"
 let g:ale_completion_enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
-" Disable hightlighting let g:ale_set_highlights = 0
+" Disable highlighting let g:ale_set_highlights = 0
 let g:ale_list_window_size = 5
 " ALE airline integration
 let g:airline#extensions#ale#enabled = 1
@@ -198,7 +198,7 @@ let g:airline#extensions#ale#enabled = 1
 " Airline theme
 let g:airline_theme='hybridline'
 
-"Auto remove trailing whitespace
+"Auto remove trailing white space
 autocmd BufWritePre * :%s/\s\+$//e
 
 " MTU formatting spec
@@ -212,5 +212,7 @@ autocmd BufNewFile,BufRead *.epp set filetype=eruby
 autocmd FileType make set noexpandtab sw=8 sts=0
 
 " Enable spellcheck
+" use z= to find suggestions
+" use zg to add to dictionary
 set spelllang=en
-
+set spell
