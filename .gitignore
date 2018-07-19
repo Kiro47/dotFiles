@@ -9,6 +9,8 @@
 !.vim/
 !.vim/spell/
 !.vim/spell/*
-
+!.config/
+!.config/htop
+!.config/htop/htoprc
 
 !.gitignore
