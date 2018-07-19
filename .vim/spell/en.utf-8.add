@@ -2,3 +2,6 @@ mouse
 Async
 config
 MTU
+AutoProv
+AutoReq
+BuildRequires
