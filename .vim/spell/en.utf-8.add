@@ -5,3 +5,4 @@ MTU
 AutoProv
 AutoReq
 BuildRequires
+printf
