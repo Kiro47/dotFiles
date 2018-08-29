@@ -4,7 +4,7 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin:/usr/share/fslint/fslint/
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin:/usr/share/fslint/fslint/:~/.apps/links/
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -51,9 +51,4 @@ source ~/.aliases
 
 ### VAGRANT OF DEATH
 export VAGRANT_HOME=/mnt/VM_DISC_2/VAGRANT/
-
-
-export INTELFPGAOCLSDKROOT="/mnt/QUARTUS/opt/MTU/quartus/v16.1.1/hld"
-
-export QSYS_ROOTDIR="/mnt/QUARTUS/opt/MTU/quartus/v16.1.1/qsys/bin"
 
